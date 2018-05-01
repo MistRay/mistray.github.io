@@ -1,10 +1,10 @@
 # Site settings
 title: MistRay
-SEOTitle: MistRay | BY Blog
+SEOTitle: MistRay
 header-img: img/post-bg-universe.jpg
 email: junyizhang5420@aliyun.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, MistRay, Java, Spring Cloud,MySQL"
+keyword: "MistRay, Java, Spring Cloud,MySQL"
 url: "http://mistray.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/mistray" # you code repository
