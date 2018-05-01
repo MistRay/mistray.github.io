@@ -18,7 +18,7 @@ sidebar-avatar: /img/Gentle.jpg      # use absolute URL, seeing it's used in bot
 
 # SNS settings
 RSS: false
- weibo_username:     一个机智人
+weibo_username:     一个机智人
 zhihu_username:     ruby-26-94
 github_username:    mistray
 facebook_username:  null
