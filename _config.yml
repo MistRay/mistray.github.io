@@ -99,11 +99,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "Stream",
+        href: "https://steamcommunity.com/profiles/76561198022241086/"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/"
+        title: "BiliBili",
+        href: "https://space.bilibili.com/2629047#/"
     },{
         title: "Apple",
         href: "https://apple.com"
