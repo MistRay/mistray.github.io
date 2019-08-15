@@ -25,10 +25,11 @@ Redis集群可以把数据分散存储到n个节点中,同时可以对每个节�
 
 ### 快速开始
 
-1. 安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)
+1. 安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)  
 
-2. 启动  
-```shell
+2. 启动
+
+```
 # 需在docker-compose.yml所在的文件夹下执行
 docker-compose up -d 
 
