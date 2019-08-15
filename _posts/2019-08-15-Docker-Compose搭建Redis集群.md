@@ -9,7 +9,7 @@ catalog: true                       # 是否归档
 tags:                               #标签
     - redis,docker,docker-compose
 ---
-# redis-docker-compose
+### redis-docker-compose
 `使用docker-compose一键搭建Redis集群`  
 >[Demo](https://github.com/MistRay/redis-docker-compose)已上传github.
 
@@ -28,7 +28,7 @@ Redis集群可以把数据分散存储到n个节点中,同时可以对每个节�
 1. 安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)
 
 2. 启动
-```shell
+```
 # 需在docker-compose.yml所在的文件夹下执行
 docker-compose up -d 
 
@@ -43,7 +43,7 @@ docker exec -it node-80 redis-cli -p 6380 --cluster create 172.16.238.10:6380 17
 > 使用docker-compose up启动容器后，这些容器都会被加入`{app_name}_default`网络中,但是ip不固定.所以该项目在docker-compose内使用了指定ip地址的方式,使每个容器的ip为定值.
 * client端节点互通问题  
 在redis配置文件中有如下配置:
-```shell
+```
 # docker虚拟网卡的ip
 cluster-announce-ip 10.1.1.5
 # 节点映射端口
