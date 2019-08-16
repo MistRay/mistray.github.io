@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      使用docker-compose搭建Redis集群(一)            # 标题 
+title:      使用docker-compose搭建Redis集群           # 标题 
 subtitle:   docker-compose&redis #副标题
 date:       2019-08-15              # 时间
 author:     MistRay                      # 作者
