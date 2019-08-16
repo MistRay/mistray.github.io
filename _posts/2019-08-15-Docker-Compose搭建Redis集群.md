@@ -4,13 +4,15 @@ title:      使用docker-compose搭建Redis集群           # 标题
 subtitle:   docker-compose&redis #副标题
 date:       2019-08-15              # 时间
 author:     MistRay                      # 作者
-header-img: img/docker-wallpaper-grey.jpg    #这篇文章标题背景图片
+header-img: img/home-bg.jpg   #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - redis
     - docker
     - docker-compose
 ---
+
+![redis](/img/docker_redis4.png)
 `使用docker-compose一键搭建Redis集群`  
 >[Demo](https://github.com/MistRay/redis-docker-compose)已上传github.
 
@@ -23,13 +25,21 @@ tags:                               #标签
 Redis集群可以把数据分散存储到n个节点中,同时可以对每个节点做备份,来保障Redis数据的高可用和稳定性
 
 ### 3.集群方案比较
+##### redis高可用集群  
 Redis集群是一个由多个主从节点群组成的分布式服务器群，它具有复制、高可用和分片特性。
 Redis集群不需要sentinel哨兵也能完成节点移除和故障转移的功能。需要将每个节点设置成集群模式，
 这种集群模式没有中心节点，可水平扩展，据官方文档称可以线性扩展到上万个节点(官方推荐不超过1000个节点)。
 redis集群的性能和高可用性均优于之前版本的哨兵模式，且集群配置非常简单。
-
-
 ![RedisCluster](/img/post_img/redis_cluster.png)
+
+##### redis哨兵集群  
+在redis3.0以前的版本要实现集群一般是借助哨兵sentinel工具来监控master节点的状态，
+如果master节点异常，则会做主从切换，将某一台slave作为master，哨兵的配置略微复杂，
+并且性能和高可用性等各方面表现一般，特别是在主从切换的瞬间存在访问瞬断的情况，
+而且哨兵模式只有一个主节点对外提供服务，没法支持很高的并发，且单个主节点内存也不宜设置得过大，
+否则会导致持久化文件过大，影响数据恢复或主从同步的效率。
+![redis_sentinel](/img/post_img/redis_sentinel.png)
+
 
 ### 4.快速开始
 
