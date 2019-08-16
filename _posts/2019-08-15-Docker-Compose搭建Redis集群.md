@@ -7,7 +7,9 @@ author:     MistRay                      # 作者
 header-img: img/docker-wallpaper-grey.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
-    - redis,docker,docker-compose
+    - redis
+    - docker
+    - docker-compose
 ---
 ### redis-docker-compose
 `使用docker-compose一键搭建Redis集群`  
@@ -21,15 +23,14 @@ tags:                               #标签
 ### Redis集群
 Redis集群可以把数据分散存储到n个节点中,同时可以对每个节点做备份,来保障Redis数据的高可用和稳定性
 
-![RedisCluster](https://rancher.com/img/blog/2018/deploying-redis-cluster/01-rancher-redis-cluster-architecture.png)
+![RedisCluster](/img/post_img/redis_cluster.png)
 
 ### 快速开始
 
-1. 安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)  
+1.安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)  
 
-2. 启动
-
-```
+2.启动
+```shell
 # 需在docker-compose.yml所在的文件夹下执行
 docker-compose up -d 
 
