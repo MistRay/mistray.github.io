@@ -11,21 +11,27 @@ tags:                               #标签
     - docker
     - docker-compose
 ---
-### redis-docker-compose
 `使用docker-compose一键搭建Redis集群`  
 >[Demo](https://github.com/MistRay/redis-docker-compose)已上传github.
 
-### 简介
+### 1.简介
 
 大部分情况开发者不会在本地搭建集群.但有时在我们需要进行集群API测试,对集群性能及可用性验证,学习Redis集群特性等情况下
 需要在本地搭建Redis集群,本项目诣在帮助没有集群部署经验的开发人员可以快速在本地搭建Redis集群
 
-### Redis集群
+### 2.Redis集群
 Redis集群可以把数据分散存储到n个节点中,同时可以对每个节点做备份,来保障Redis数据的高可用和稳定性
+
+### 3.集群方案比较
+Redis集群是一个由多个主从节点群组成的分布式服务器群，它具有复制、高可用和分片特性。
+Redis集群不需要sentinel哨兵也能完成节点移除和故障转移的功能。需要将每个节点设置成集群模式，
+这种集群模式没有中心节点，可水平扩展，据官方文档称可以线性扩展到上万个节点(官方推荐不超过1000个节点)。
+redis集群的性能和高可用性均优于之前版本的哨兵模式，且集群配置非常简单。
+
 
 ![RedisCluster](/img/post_img/redis_cluster.png)
 
-### 快速开始
+### 4.快速开始
 
 1.安装依赖: [docker](https://www.docker.com/),[docker-compose](https://docs.docker.com/compose/install/)及[python3.X](https://www.python.org/downloads/)  
 
@@ -37,7 +43,7 @@ docker-compose up -d
 docker exec -it node-80 redis-cli -p 6380 --cluster create 172.16.238.10:6380 172.16.238.11:6381 172.16.238.12:6382 172.16.238.13:6383 172.16.238.14:6384 172.16.238.15:6385 --cluster-replicas 1
 ```
 
-### 说明
+### 5.说明
 
 * 使用Redis版本为5.0.5-alpine,如有需要请自行更改.  
 > redis官方在redis3.x和redis4.x提供了redis-trib.rb工具方便我们快速搭建集群,在redis5.x中更是可以直接使用redis-cli命令来直接完成集群的一键搭建,省去了redis-trib.rb依赖ruby环境的问题。
@@ -60,3 +66,9 @@ cluster-announce-bus-port 16379
       # 设置时区为上海
       - TZ=Asia/Shanghai
 ```
+### 6.Reference
+
+* [medium.com](https://medium.com/@dhammikasamankumara/getting-started-with-redis-cluster-on-windows-6435d0ffd87)
+* [redis.io](https://redis.io/topics/cluster-tutorial)
+* [www.g5niusx.com](https://www.g5niusx.com/2019/04/redis-4.html)
+* [juejin.im](https://juejin.im/post/5d4afaaf518825403769dd44)
