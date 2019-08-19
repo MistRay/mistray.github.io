@@ -69,12 +69,15 @@ kramdown:
 #  admin: mistray
 #  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
+# valine
+valine:
+  enable: true
 
 # 统计
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: e4ff8b8ed87a0fb31b42a752d32590ce
+# ba_track_id: e4ff8b8ed87a0fb31b42a752d32590ce
 
 # Google Analytics
 #ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx

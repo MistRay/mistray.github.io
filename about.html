@@ -97,7 +97,21 @@ header-img: "img/post-bg-rwd.jpg"
     _render();
 </script>
 
-
+{% if site.valine.enable %}
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'b1A6bx8co0XOKHCw5X4QsP5X-gzGzoHsz',
+        appKey: 'UAmhmcm9OmVl9OmE35nu2hC7',
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'MistRay'
+    })
+</script>
+{% endif %}
 <!-- Gitalk 评论 start  -->
 {% if site.gitalk.enable %}
 <!-- Gitalk link  -->
