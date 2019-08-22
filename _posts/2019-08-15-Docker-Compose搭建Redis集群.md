@@ -82,3 +82,6 @@ cluster-announce-bus-port 16379
 * [redis.io](https://redis.io/topics/cluster-tutorial)
 * [www.g5niusx.com](https://www.g5niusx.com/2019/04/redis-4.html)
 * [juejin.im](https://juejin.im/post/5d4afaaf518825403769dd44)
+
+### 7.转载
+本文遵循 [CC 4.0 by-sa](https://creativecommons.org/licenses/by-sa/4.0/) 版权协议，转载请附上原文出处链接和本声明。
