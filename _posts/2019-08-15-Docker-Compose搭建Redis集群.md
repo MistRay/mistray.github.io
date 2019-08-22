@@ -76,6 +76,7 @@ cluster-announce-bus-port 16379
       # 设置时区为上海
       - TZ=Asia/Shanghai
 ```
+
 ### 6.Reference
 
 * [medium.com](https://medium.com/@dhammikasamankumara/getting-started-with-redis-cluster-on-windows-6435d0ffd87)
