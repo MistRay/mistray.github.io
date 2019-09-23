@@ -2,7 +2,7 @@
 .highlight table pre { margin: 0; }
 .highlight .cm {
   color: #999988;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 .highlight .cp {
   color: #999999;
