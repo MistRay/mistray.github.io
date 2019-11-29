@@ -102,7 +102,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "Stream",
+        title: "Steam",
         href: "https://steamcommunity.com/profiles/76561198022241086/"
     },{
         title: "BiliBili",
