@@ -4,7 +4,7 @@ title:      使用docker-compose搭建Redis集群           # 标题
 subtitle:   docker-compose&redis #副标题
 date:       2019-08-15              # 时间
 author:     MistRay                      # 作者
-header-img: img/home-bg.jpg   #这篇文章标题背景图片
+# header-img: img/home-bg.jpg   #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - redis

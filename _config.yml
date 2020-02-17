@@ -4,7 +4,7 @@ SEOTitle: MistRay
 header-img: img/post-bg-universe.jpg
 email: junyizhang5420@aliyun.com
 description: "Every failure is leading towards success."
-keyword: "MistRay, Java, Spring Cloud,MySQL"
+keyword: "MistRay, Java, Spring Cloud , MySQL"
 url: "http://mistray.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/mistray" # you code repository
@@ -107,12 +107,6 @@ friends: [
     },{
         title: "BiliBili",
         href: "https://space.bilibili.com/2629047#/"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
     }
 ]
 
