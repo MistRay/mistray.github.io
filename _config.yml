@@ -102,6 +102,9 @@ service-worker: true
 # Friends
 friends: [
     {
+        title: "黑客派",
+        href: "https://hacpai.com/"
+    },{
         title: "Steam",
         href: "https://steamcommunity.com/profiles/76561198022241086/"
     },{
