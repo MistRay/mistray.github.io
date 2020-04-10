@@ -94,11 +94,11 @@ ThreadLocalMap中也是初始化一个大小16的Entry数组，Entry对象用来
       * one when we have at least one entry to put in it.
       */
      ThreadLocalMap(ThreadLocal<?> firstKey, Object firstValue) {
-         // 和HashMap相同，内部是一个Entity数组,默认初始化长度为16
+         // 和HashMap相同，内部是一个Entry数组,默认初始化长度为16
          table = new Entry[INITIAL_CAPACITY];
          // 算出ThreadLocal在数组里面的所在位置
          int i = firstKey.threadLocalHashCode & (INITIAL_CAPACITY - 1);
-         // 把K,V组成的entity扔到数组里
+         // 把K,V组成的Entry扔到数组里
          table[i] = new Entry(firstKey, firstValue);
          size = 1;
          // 设置扩容的阈值
@@ -180,7 +180,7 @@ private void set(ThreadLocal<?> key, Object value) {
 ```
 ![Thread内容](/img/post_img/post_2020_04_09_01Thread内容.jpg)
 
-referent为null，可以看出table里的元素就是ThreadLocalMap中的Entity。
+referent为null，可以看出table里的元素就是ThreadLocalMap中的Entry。
 
 ```java
         /**
@@ -201,11 +201,11 @@ referent为null，可以看出table里的元素就是ThreadLocalMap中的Entity�
             }
         }
 ```
-从Entity中可以看出一些端倪，Entity的父类是WeakReference，也就是弱引用，referent是WeakReference构造函数的参数。
+从Entry中可以看出一些端倪，Entry的父类是WeakReference，也就是弱引用，referent是WeakReference构造函数的参数。
 而这里将ThreadLocal作为弱引用的对象，而弱引用的对象只要发生GC就会被回收。（以后会专门写一篇文章来介绍Java中的几种引用）
 
-所以，在唯一的强引用被我主动消除后，这里的弱引用无法支撑ThreadLocal不被GC回收，而Entity的value，只要线程不结束，
-就会有一个引用链即:Thread->ThreadLocalMap->Entity->value，所以如果不做处理，value就会一直留存在内存中。
+所以，在唯一的强引用被我主动消除后，这里的弱引用无法支撑ThreadLocal不被GC回收，而Entry的value，只要线程不结束，
+就会有一个引用链即:Thread->ThreadLocalMap->Entry->value，所以如果不做处理，value就会一直留存在内存中。
 
 想复现内存泄露必须满足以下两个条件：  
 1. 线程的生命周期很长，且重复利用（例如线程池中的线程）
