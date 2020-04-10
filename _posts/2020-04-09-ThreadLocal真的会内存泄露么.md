@@ -203,7 +203,7 @@ referent为null，可以看出table里的元素就是ThreadLocalMap中的Entity�
 从Entity中可以看出一些端倪，Entity的父类是WeakReference，也就是弱引用，referent是WeakReference构造函数的参数。
 而这里将ThreadLocal作为弱引用的对象，而弱引用的对象只要发生GC就会被回收。（以后会专门写一篇文章来介绍Java中的几种引用）
 
-所以，在唯一的强引用被我主动消除后，这里的若引用无法支撑ThreadLocal不被GC回收，而Entity的value，只要线程不结束，
+所以，在唯一的强引用被我主动消除后，这里的弱引用无法支撑ThreadLocal不被GC回收，而Entity的value，只要线程不结束，
 就会有一个引用链即:Thread->ThreadLocalMap->Entity->value，所以如果不做处理，value就会一直留存在内存中。
 
 想复现内存泄露必须满足以下两个条件：  
