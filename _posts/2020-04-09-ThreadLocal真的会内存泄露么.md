@@ -226,8 +226,12 @@ ThreadLocal如果使用不当真的会内存泄露。但只要掌握了正确的
 
 
 ## Reference
-[Java面试必问，ThreadLocal终极篇](https://www.jianshu.com/p/377bb840802f)
-
+[Java面试必问，ThreadLocal终极篇](https://www.jianshu.com/p/377bb840802f)  
+[深入分析 ThreadLocal](http://www.iocoder.cn/JUC/sike/ThreadLocal/)  
+[ThreadLocal就是这么简单](https://juejin.im/post/5ac2eb52518825555e5e06ee)  
+[ThreadLocal-面试必问深度解析](https://www.jianshu.com/p/98b68c97df9b)  
+[ThreadLocal内存泄漏真因探究](https://www.jianshu.com/p/a1cd61fa22da)  
+[Java中的四种引用类型（强、软、弱、虚）](https://www.jianshu.com/p/ca6cbc246d20)
 ## 转载
 
 本文遵循 [CC 4.0 by-sa](https://creativecommons.org/licenses/by-sa/4.0/) 版权协议,转载请附上原文出处链接和本声明。
