@@ -148,10 +148,10 @@ private void set(ThreadLocal<?> key, Object value) {
 
 每个ThreadLocal对象都有一个hash值threadLocalHashCode，每初始化一个ThreadLocal对象，hash值就增加一个固定的大小0x61c88647。
 
-在插入过程中，根据ThreadLocal对象的hash值，定位到table中的位置i，过程如下：
-1、如果当前位置是空的，那么正好，就初始化一个Entry对象放在位置i上；
-2、不巧，位置i已经有Entry对象了，如果这个Entry对象的key正好是即将设置的key，那么重新设置Entry中的value；
-3、很不巧，位置i的Entry对象，和即将设置的key没关系，那么只能找下一个空位置；
+在插入过程中，根据ThreadLocal对象的hash值，定位到table中的位置i，过程如下：  
+1、如果当前位置是空的，那么正好，就初始化一个Entry对象放在位置i上；  
+2、不巧，位置i已经有Entry对象了，如果这个Entry对象的key正好是即将设置的key，那么重新设置Entry中的value；  
+3、很不巧，位置i的Entry对象，和即将设置的key没关系，那么只能找下一个空位置；  
 
 这样的话，在get的时候，也会根据ThreadLocal对象的hash值，定位到table中的位置，然后判断该位置Entry对象中的key是否和get的key一致，如果不一致，就判断下一个位置
 
