@@ -1,14 +1,14 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
 title:      ThreadLocal真的会内存泄露么        # 标题 
-subtitle:   Reference  #副标题
+subtitle:   ThreadLocal  #副标题
 date:       2020-04-09          # 时间
 author:     MistRay                      # 作者
 # header-img: img/post-bg-7.jpg 这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - ThreadLocal
-    - Reference
+    - Thread
 ---
 ## 前言
 
