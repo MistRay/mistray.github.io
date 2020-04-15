@@ -135,12 +135,12 @@ RedisCluster高可用有两种模式，当`cluster-require-full-coverage`设置�
 
 
 ## Reference
-[使用docker-compose搭建Redis集群](https://www.mistray.site/2019/08/15/Docker-Compose%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4/)
-[Redis Cluster vs.Sentinel](http://23.253.120.235/sentinel-or-cluster/)
-[Redis/sentinel/cluster](https://www.jianshu.com/p/faabfcdf825d)
-[Redis Sentinel & Redis Cluster - what?](https://fnordig.de/2015/06/01/redis-sentinel-and-redis-cluster/)
-[Redis cluster 添加 删除 重分配 节点](https://segmentfault.com/a/1190000014499174)
-[cluster-tutorial](https://redis.io/topics/cluster-tutorial)
+[使用docker-compose搭建Redis集群](https://www.mistray.site/2019/08/15/Docker-Compose%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4/)  
+[Redis Cluster vs.Sentinel](http://23.253.120.235/sentinel-or-cluster/)  
+[Redis/sentinel/cluster](https://www.jianshu.com/p/faabfcdf825d)  
+[Redis Sentinel & Redis Cluster - what?](https://fnordig.de/2015/06/01/redis-sentinel-and-redis-cluster/)  
+[Redis cluster 添加 删除 重分配 节点](https://segmentfault.com/a/1190000014499174)  
+[cluster-tutorial](https://redis.io/topics/cluster-tutorial)  
 ## 转载
 
 本文遵循 [CC 4.0 by-sa](https://creativecommons.org/licenses/by-sa/4.0/) 版权协议,转载请附上原文出处链接和本声明。
