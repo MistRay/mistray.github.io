@@ -129,10 +129,12 @@ If the option is set to no, the cluster will still serve queries even if only re
 
 可以看出，集群的状态并没有变成fail，依然是ok。
 
+由之前的测试内容可以看出，MistRay1和MistRay5的key会路由到80/85的主从之中，所以我们在停掉80/85后，
+对插入的其他key进行操作
+
 ![设置为no客户端反馈](/img/post_img/post_2020_04_15_09设置为no客户端反馈.png)
 
-由之前的测试内容可以看出，MistRay1和MistRay5的key会路由到80/85的主从之中，所以我们在停掉80/85后，
-对插入的其他key进行操作，由上图测试结果可知，客户端是可以对集群内健康的分片进行操作。
+由上图测试结果可知，客户端是可以对集群内健康的分片进行操作。
 
 
 ## 总结
