@@ -104,6 +104,7 @@ cluster的功能有已下几点：
 
 结果也是ok的，可以查到对应的数据，所以证明了RedisCluster集群的failover能力。
 
+#### 集群数据完整性与可用性
 你以为这就结束了？当然没有。  
 当停止了80节点后，有趣的事情发生了。  
 
@@ -119,7 +120,7 @@ cluster的功能有已下几点：
 the cluster stops accepting writes if some percentage of the key space is not covered by any node. 
 If the option is set to no, the cluster will still serve queries even if only requests about a subset of keys can be processed.
 
-该配置项可以控制当前节点在集群状态为fail的情况下是否继续正常提供服务，默认值为yes。  
+该配置项可以控制当前节点在集群数据不具备完整性的情况下是否继续正常提供服务，默认值为yes。  
 用刚才的测试举个例子就是：80和85都停了，如果该项设置为no那么集群中剩下的机器可以正常提供服务，反之亦然。
 
 修改了该配置项后，停掉80和85  
@@ -127,6 +128,12 @@ If the option is set to no, the cluster will still serve queries even if only re
 ![停掉80和85后](/img/post_img/post_2020_04_15_08停掉80和85后.png)
 
 可以看出，集群的状态并没有变成fail，依然是ok。
+
+![设置为no客户端反馈](/img/post_img/post_2020_04_15_09设置为no客户端反馈.png)
+
+由之前的测试内容可以看出，MistRay1和MistRay5的key会路由到80/85的主从之中，所以我们在停掉80/85后，
+对插入的其他key进行操作，由上图测试结果可知，客户端是可以对集群内健康的分片进行操作。
+
 
 ## 总结
 RedisCluster高可用有两种模式，当`cluster-require-full-coverage`设置为yes时，只要集群不具备数据完整性，
