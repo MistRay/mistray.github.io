@@ -12,7 +12,7 @@ github_repo: "https://github.com/mistray" # you code repository
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "with contact between two items, there will always be an exchange!"
-sidebar-avatar: /img/Gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/MistRay.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
