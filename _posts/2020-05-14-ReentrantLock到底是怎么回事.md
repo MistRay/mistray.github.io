@@ -131,6 +131,7 @@ acquire(int arg)函数是NonfairSync的抽象父类Sync的父类AbstractQueuedSy
     public final void acquire(int arg) {
         if (!tryAcquire(arg) &&
             acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
+            // 取消当前线程的阻塞状态
             selfInterrupt();
     }
     // aqs本身不提供实现,所以NonfairSync复写了该函数
