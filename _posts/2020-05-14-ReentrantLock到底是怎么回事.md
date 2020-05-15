@@ -389,7 +389,7 @@ tryRelease函数被ReentrantLock的内部抽象类Sync复写，所以公平锁�
 2. 在等待队列中自旋的节点只关心自己前驱节点,前驱节点为头节点且成功获取了同步状态.
 3. ReentrantLock的可重入特性是通过state参数来保证的
 4. ReentrantLock公平锁和非公平锁的实现十分相似,非公平锁在加锁的时候会先去尝试加锁,失败后尝试入队,而公平锁直接尝试入队,
-在争抢锁的逻辑中,公平锁多了一个hasQueuedPredecessors函数作为校验,只有当前队列为队列头或队列为空时才可通过校验
+在争抢锁的逻辑中,公平锁多了一个hasQueuedPredecessors函数作为校验,只有当前节点为队列头或队列为空时才可通过校验
 
 ## Reference
 [队列同步器（AQS）详解](https://blog.csdn.net/sunxianghuang/article/details/52287968)  
