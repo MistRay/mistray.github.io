@@ -107,7 +107,7 @@ self.addEventListener('activate',  event => {
  */
 self.addEventListener('fetch', event => {
   // logs for debugging
-  console.log(`fetch ${event.request.url}`)
+  // console.log(`fetch ${event.request.url}`)
   //console.log(` - type: ${event.request.type}; destination: ${event.request.destination}`)
   //console.log(` - mode: ${event.request.mode}, accept: ${event.request.headers.get('accept')}`)
 
